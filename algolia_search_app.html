@@ -1,0 +1,65 @@
+<head>
+
+	<link rel="icon" href="favicon.ico">
+	<title>Client Search App</title>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" 
+	crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@1/dist/instantsearch.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@1/dist/instantsearch.min.js"></script>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<style type="text/css">
+		.panel-heading {
+			background-image: none !important;
+			background-color: #1C53A2 !important;
+		}
+		.panel-primary {
+			border-color: #1C53A2 !important;
+		}
+		.panel-body {
+			padding: 0px !important;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="container" style="padding: 10px">
+		<h2>
+			<img src="aodocs_flat_colors.svg" width="10%" height="17%">
+			<font size="8" face="Open Sans">AOSearch</font>
+		</h2>
+		<div class="row">
+			<div class="col-sm-3">
+				<div style='padding: 5px' id="searchBox" type="text" ></div>
+			   	<div style='padding: 5px' id="hits-container"></div>
+			   	<div id="pagination-container"></div>
+			</div>
+			<div class="col-sm-9" style="padding: 5px">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title" id="current_client_title">
+							<!-- Panel Title HTML is written by algolia_search_app.js when a search result is clicked -->
+						</h3>
+					</div>
+					<div class="panel-body" id="current_client_detail">
+							<!-- Panel Detail HTML is written by algolia_search_app.js when a search result is clicked -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script src="algolia_search_app.js"></script>
+
+</body>
